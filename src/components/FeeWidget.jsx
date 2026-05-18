@@ -4,7 +4,7 @@ export default function FeeWidget() {
   const [fee, setFee] = useState(null);
 
   useEffect(() => {
-    fetch("https://cantex-bot-backend.onrender.com/current_fee")
+    fetch("https://cantexback.onrender.com/current_fee")
       .then(res => res.json())
       .then(data => setFee(data.fee))
       .catch(() => setFee("Error"));
